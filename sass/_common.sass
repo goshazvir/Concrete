@@ -48,6 +48,10 @@ body
 	-moz-osx-font-smoothing: antialiased
 	+selection
 		background: $yellow
+	&.is-overlay
+		position: relative
+		.nav-overlay
+			display: block
 
 h1
 	+r-light
@@ -66,6 +70,17 @@ header
 	vertical-align: middle
 	+s(logo)
 	font-size: 0
+	
+.nav-overlay
+	display: none
+	z-index: 999
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: #000
+	+opacity(0.9)  
 
 .nav
 	display: inline-block
@@ -95,6 +110,8 @@ header
 	li
 		float: left
 		margin-left: 16px
+		&.mobile
+			display: none
 	a
 		display: block
 		padding-top: 35px
@@ -190,7 +207,7 @@ footer
 		font-size: 11px
 		color: #979797 
 		&.copy-special
-			color: #fcde0f
+			color: $yellow
 
 // slide
 .slide

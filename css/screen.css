@@ -1,8 +1,6 @@
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
-body, html { height: 100%; }
-
 img, fieldset, a img { border: none; }
 
 input[type="submit"], button { cursor: pointer; }
@@ -67,10 +65,14 @@ header .header-in, footer .footer-in, .slide .slide-in, .bid .bid-in, .service .
 body { min-width: 980px; font-size: 14px; font-family: Arial, sans-serif; line-height: 1.4; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: antialiased; }
 body ::selection { background: #fcde0f; }
 body ::-moz-selection { background: #fcde0f; }
+body.is-overlay { position: relative; }
+body.is-overlay .nav-overlay { display: block; }
 
 h1 { font-family: "Roboto", sans-serif; font-weight: 300; font-style: normal; font-size: 35px; text-transform: uppercase; }
 
 .logo { margin-top: 22px; margin-right: 80px; display: inline-block; vertical-align: middle; background: url('../img/icons-s4392cb8907.png') 0 -1084px no-repeat; width: 168px; height: 56px; font-size: 0; }
+
+.nav-overlay { display: none; z-index: 999; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
 
 .nav { display: inline-block; vertical-align: top; }
 .nav.m-footer a { padding: 0; }
@@ -80,6 +82,7 @@ h1 { font-family: "Roboto", sans-serif; font-weight: 300; font-style: normal; fo
 .nav ul { margin-left: -12px; *zoom: 1; }
 .nav ul:after { content: " "; display: table; clear: both; }
 .nav li { float: left; margin-left: 16px; }
+.nav li.mobile { display: none; }
 .nav a { display: block; padding-top: 35px; text-transform: uppercase; text-decoration: none; font-size: 15px; color: white; font-family: "DinConC", Arial, sans-serif; font-weight: 400; font-style: normal; position: relative; }
 .nav a.is-active { color: #8f8e8e; }
 .nav a.is-active:before { content: ""; height: 4px; background: #fcde0f; position: absolute; top: 0; left: 0; right: 0; }
@@ -188,10 +191,49 @@ footer .tel { float: right; }
   .slide:before { width: 320px; height: 210px; background: url("../img/bg_mobile.jpg"); position: absolute; bottom: 0px; left: 50%; margin-left: -160px; }
   .slide .slide-in .h3-type { padding: 0 50px; }
   header .lang, header .tel .tel-descr { display: none; }
-  .nav ul { display: none; }
+  .nav ul { display: none; padding-top: 10px; padding-bottom: 16px; z-index: 999; position: absolute; left: 0; right: 0; top: 0; background: #fcde0f; }
+  .nav ul li { margin-left: 0; float: none; background: #fcde0f; text-align: center; }
+  .nav ul li.mobile { margin-bottom: 20px; font-size: 24px; text-transform: uppercase; color: black; }
+  .nav ul li.mobile .nav-ico2 { margin-right: 16px; display: inline-block; vertical-align: middle; background: url('../img/icons-s4392cb8907.png') 0 -1181px no-repeat; width: 24px; height: 21px; }
+  .nav ul li.mobile span { display: inline-block; vertical-align: middle; }
+  .nav ul li.mobile .nav-close { background: url('../img/icons-s4392cb8907.png') 0 -1212px no-repeat; width: 51px; height: 48px; position: absolute; top: 0; right: 0; }
+  .nav ul li a { padding: 9px 0; font-size: 20px; color: black; }
+  .nav ul li a.is-special, .nav ul li a.is-active { color: black; }
+  .nav ul li a:hover { background: white; }
+  .nav ul li .nav-item { display: block; margin-left: 100px; text-align: left; }
   .nav .nav-ico { display: inline-block; }
   .logo { margin-top: 57px; margin-left: 16px; }
   .tel { width: 180px; margin: 0; position: absolute; top: 20px; left: 50%; margin-left: -90px; text-align: center; }
   .tel .tel-num-pref, .tel .tel-num-num { border-bottom: 1px dashed #666666; }
   .tel .tel-num-pref { display: inline-block; line-height: 18px; }
-  .tel .tel-num .tel-num-num { padding-left: 8px; margin-left: 0; } }
+  .tel .tel-num .tel-num-num { padding-left: 8px; margin-left: 0; }
+  .bid .bid-in { padding-top: 30px; }
+  .bid h1 { margin-bottom: 20px; font-size: 24px; }
+  .tab { padding-bottom: 30px; }
+  .tab .tab-nav li { width: 270px; margin-top: 10px; }
+  .tab .tab-nav li.m-first:before, .tab .tab-nav li.m-last:before { content: none; }
+  .tab .tab-nav li.m-first { margin-top: 0; }
+  .tab .tab-nav li a { padding: 10px 0px; }
+  .tab .tab-detail { width: 290px; margin: 30px auto 0; position: static; }
+  .tab .tab-detail:before, .tab .tab-detail:after { content: none; }
+  footer { min-height: 193px; padding: 27px 0 0px; }
+  footer .footer-in { min-height: 193px; position: relative; }
+  footer .footer-in .footer-left { width: 100%; float: none; }
+  footer .footer-in .footer-right { width: 100%; float: none; }
+  footer .footer-in .footer-center { width: 100%; float: none; }
+  footer .footer-in .tel { width: 180px; text-align: right; top: 85px; left: 50%; margin-left: -115px; }
+  footer .footer-in .nav.m-footer { display: none; }
+  footer .footer-in .social { width: 100px; position: absolute; top: 0px; left: 50%; margin-left: -50px; }
+  footer .footer-in .copy { width: 140px; position: absolute; top: 50px; left: 50%; margin-left: -70px; margin-bottom: 0; text-align: center; }
+  footer .footer-in .lang { width: 100%; margin: 0; position: absolute; bottom: 0; }
+  footer .footer-in .lang li { width: 50%; height: 46px; line-height: 46px; margin: 0; text-align: center; }
+  footer .footer-in .lang li a { background: #151515; font-size: 13px; color: #8f8e8e; }
+  footer .footer-in .lang li a.is-active { background: #262626; color: white; }
+  .wrap { padding: 40px 0 0; }
+  .service h1 { font-size: 24px; }
+  .service .service-items { margin-bottom: 0; }
+  .service .service-items .service-item { float: none; margin: 0 auto 50px; }
+  .service .service-items .service-item .service-media { margin-bottom: 40px; }
+  .slider { padding-bottom: 70px; }
+  .slider .slider-media { height: 115px; line-height: 115px; margin-bottom: 120px; }
+  .slider .slider-media img { height: 100%; margin: 0 auto; } }

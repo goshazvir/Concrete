@@ -22,6 +22,50 @@
 	.nav
 		ul
 			display: none
+			padding-top: 10px
+			padding-bottom: 16px
+			z-index: 999
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			background: $yellow
+			li
+				margin-left: 0
+				float: none
+				background: $yellow
+				text-align: center
+				&.mobile
+					margin-bottom: 20px
+					font-size: 24px
+					text-transform: uppercase
+					color: #000 
+					.nav-ico2
+						margin-right: 16px
+						display: inline-block
+						vertical-align: middle
+						+s(nav_active)
+					span
+						display: inline-block
+						vertical-align: middle
+					.nav-close
+						+s(nav_close)
+						position: absolute
+						top: 0
+						right: 0
+				a
+					padding: 9px 0
+					font-size: 20px
+					color: #000
+					&.is-special, &.is-active
+						color: #000
+					&:hover
+						background: #FFF 
+				.nav-item
+					display: block
+					margin-left: 100px
+					text-align: left
+
 		.nav-ico
 			display: inline-block
 	.logo
@@ -44,4 +88,106 @@
 			.tel-num-num
 				padding-left: 8px
 				margin-left: 0
+	.bid
+		.bid-in
+			padding-top: 30px
+		h1
+			margin-bottom: 20px
+			font-size: 24px
+	.tab
+		padding-bottom: 30px
+		.tab-nav
+			li
+				width: 270px
+				margin-top: 10px
+				&.m-first, &.m-last
+					&:before
+						content: none
+				&.m-first
+					margin-top: 0
+				a
+					padding: 10px 0px
+		.tab-detail
+			width: 290px
+			margin: 30px auto 0
+			position: static
+			&:before, &:after
+				content: none
+	footer
+		min-height: 193px
+		padding: 27px 0 0px 
+		.footer-in
+			min-height: 193px
+			position: relative
+			.footer-left
+				width: 100%
+				float: none
+			.footer-right
+				width: 100%
+				float: none
+			.footer-center
+				width: 100%
+				float: none
+			.tel
+				width: 180px
+				text-align: right
+				top: 85px
+				left: 50%
+				margin-left: -115px
+			.nav
+				&.m-footer
+					display: none
+			.social
+				width: 100px
+				position: absolute
+				top: 0px
+				left: 50%
+				margin-left: -50px
+			.copy
+				width: 140px
+				position: absolute
+				top: 50px
+				left: 50%
+				margin-left: -70px
+				margin-bottom: 0
+				text-align: center
+			.lang
+				width: 100%
+				margin: 0
+				position: absolute
+				bottom: 0
+				li
+					width: 50%
+					height: 46px
+					line-height: 46px
+					margin: 0
+					text-align: center
+					a
+						background: #151515
+						font-size: 13px
+						color: #8f8e8e 
+						&.is-active
+							background: #262626
+							color: #fff
+	.wrap
+		padding: 40px 0 0
+	.service
+		h1
+			font-size: 24px
+		.service-items
+			margin-bottom: 0
+			.service-item
+				float: none
+				margin: 0 auto 50px
+				.service-media
+					margin-bottom: 40px
+	.slider
+		padding-bottom: 70px
+		.slider-media
+			height: 115px
+			line-height: 115px
+			margin-bottom: 120px
+			img
+				height: 100%
+				margin: 0 auto
 
