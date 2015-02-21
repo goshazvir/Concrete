@@ -1,0 +1,47 @@
+@media only screen and (max-width: 500px)
+	body
+		min-width: 100% 
+	%wrap
+		width: 100%
+	.slide
+		min-height: 580px
+		&:before
+			width: 320px
+			height: 210px
+			background: url("../img/bg_mobile.jpg")
+			position: absolute
+			bottom: 0px
+			left: 50%
+			margin-left: -160px
+		.slide-in
+			.h3-type
+				padding: 0 50px
+	header
+		.lang, .tel .tel-descr
+			display: none
+	.nav
+		ul
+			display: none
+		.nav-ico
+			display: inline-block
+	.logo
+		margin-top: 57px
+		margin-left: 16px
+	.tel
+		width: 180px
+		margin: 0
+		position: absolute
+		top: 20px
+		left: 50%
+		margin-left: -90px
+		text-align: center
+		.tel-num-pref, .tel-num-num
+			border-bottom: 1px dashed #666
+		.tel-num-pref
+			display: inline-block
+			line-height: 18px
+		.tel-num
+			.tel-num-num
+				padding-left: 8px
+				margin-left: 0
+

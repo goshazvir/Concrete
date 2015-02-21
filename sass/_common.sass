@@ -1,0 +1,459 @@
+// Fonts
+// --------------------------------------------------
+
++font(DinConC, DINCONCM)
+=din
+	font-family: "DinConC", Arial, sans-serif
+	font-weight: 400 
+	font-style: normal 
+
+=r-light
+	font-family: 'Roboto', sans-serif
+	font-weight: 300
+	font-style: normal
+
+=r
+	font-family: 'Roboto', sans-serif 
+	font-weight: 400
+	font-style: normal
+
+=r-bold
+	font-family: 'Roboto', sans-serif 
+	font-weight: 700
+	font-style: normal
+
+=r-black
+	font-family: 'Roboto', sans-serif
+	font-weight: 900
+	font-style: normal
+
+// Misc
+// --------------------------------------------------
+%wrap
+	width: 980px
+	margin-left: auto
+	margin-right: auto 
+		
+$gray: #8f8e8e
+$yellow: #fcde0f
+
+// Common blocks
+// --------------------------------------------------
+body
+	min-width: 980px 
+	font-size: 14px 
+	font-family: Arial, sans-serif
+	line-height: 1.4
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: antialiased
+	+selection
+		background: $yellow
+
+h1
+	+r-light
+	font-size: 35px
+	text-transform: uppercase
+	
+// header
+header
+	.header-in
+		@extend %wrap
+
+.logo
+	margin-top: 22px
+	margin-right: 80px
+	display: inline-block
+	vertical-align: middle
+	+s(logo)
+	font-size: 0
+
+.nav
+	display: inline-block
+	vertical-align: top
+	&.m-footer
+		a
+			padding: 0
+			&.is-active
+				&:before
+					content: none
+		.nav-note
+			margin-top: 30px
+			text-align: center
+			font-size: 12px
+			+r-light
+			color: #dfdfdf 
+	.nav-ico
+		display: none
+		cursor: pointer
+		+s(nav)
+		position: absolute
+		top: 73px
+		right: 27px
+	ul
+		margin-left: -12px
+		+clr
+	li
+		float: left
+		margin-left: 16px
+	a
+		display: block
+		padding-top: 35px
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 15px
+		color: #FFF
+		+din
+		position: relative
+		&.is-active
+			color: $gray
+			&:before
+				content: ""
+				height: 4px
+				background: $yellow
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+		&.is-special
+			color: $yellow
+
+.lang
+	margin: 0 42px
+	display: inline-block
+	vertical-align: top
+	ul
+		+clr
+	li
+		float: left
+		margin-left: 12px
+		&:first-child
+			margin-left: 0
+	a
+		display: block
+		padding-top: 36px
+		font-size: 13px
+		text-transform: uppercase
+		text-decoration: none
+		+r
+		color: $gray 
+		&.is-active
+			color: #fff
+
+.tel
+	margin-top: 36px
+	display: inline-block
+	vertical-align: top
+	.tel-num
+		.tel-num-pref
+			color: #d2d0d1 
+		.tel-num-num
+			margin-left: 7px
+			+r-black
+			color: #fff
+	.tel-descr
+		+r-light
+		font-size: 11px
+		color: $gray
+		text-align: right
+
+// footer
+footer
+	padding: 30px 0 40px
+	background: #000
+	color: #fff
+	.footer-in
+		@extend %wrap
+		+clr
+		.footer-left
+			width: 250px
+			float: left
+		.footer-right
+			width: 250px
+			float: right
+			overflow: hidden
+		.footer-center
+			overflow: hidden
+	.lang, .tel
+		margin: 0
+		a
+			padding-top: 0
+	.lang
+		margin-left: 25px
+		float: left
+	.tel
+		float: right
+		
+.copy
+	margin-bottom: 20px
+	span
+		text-transform: uppercase
+		font-size: 11px
+		color: #979797 
+		&.copy-special
+			color: #fcde0f
+
+// slide
+.slide
+	min-height: 650px
+	background: #000 
+	color: #fff 
+	position: relative
+	&:before
+		content: ""
+		width: 980px
+		height: 507px
+		background: url("../img/bg.jpg")
+		position: absolute
+		bottom: 0px
+		left: 50%
+		margin-left: -490px
+	.slide-in
+		margin-top: 30px
+		@extend %wrap
+		position: relative
+		z-index: 666 
+		text-align: center
+	h1
+		margin-bottom: 5px
+	.h3-info
+		margin-bottom: 20px
+		font-size: 15px
+		text-transform: uppercase
+		color: #b1b1b1
+	.h3-type
+		font-size: 18px
+		text-transform: uppercase
+		+din
+
+// bid
+.bid
+	background: #ffe110 
+	.bid-in
+		padding: 45px 0 0px
+		@extend %wrap
+	h1
+		margin-bottom: 30px
+		text-align: center
+
+.tab
+	padding-bottom: 100px
+	overflow: hidden
+	text-align: center
+	position: relative
+	.tab-nav
+		text-align: center
+		font-size: 0
+		position: relative
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 4px
+		&:first-child
+			margin-left: 0
+		&.is-active
+			a
+				background: #0e0f10
+				color: #ffe110 
+		&.m-first
+			&:before
+				content: ""
+				width: 150px
+				height: 1px
+				background: #e6cc10
+				position: absolute
+				top: 24px
+				left: 0
+		&.m-last
+			&:before
+				content: ""
+				width: 150px
+				height: 1px
+				background: #e6cc10
+				position: absolute
+				top: 24px
+				right: 0
+	.tab-link
+		display: block
+		padding: 10px 22px
+		background: #ffca10 
+		font-size: 18px
+		+r-light
+		text-decoration: none
+		color: #302f2f 
+	.tab-content
+		padding: 40px 40px 0
+		position: relative
+		&:before, &:after
+			content: ""
+			width: 1px
+			background: #e6cc10 
+			position: absolute
+			top: -23px
+			bottom: -50px
+		&:before
+			left: 0
+		&:after
+			right: 0
+	.tab-detail
+		width: 500px
+		position: absolute
+		left: 50%
+		margin-left: -250px
+		bottom: 34px
+		font-size: 12px
+		color: #3d3d3d 
+		+r-light
+		strong
+			color: #0e0f10
+		&:before
+			content: ""
+			width: 240px
+			height: 1px
+			background: #e6cc10
+			position: absolute
+			top: 16px
+			left: -240px
+		&:after
+			content: ""
+			width: 240px
+			height: 1px
+			background: #e6cc10
+			position: absolute
+			top: 16px
+			right: -240px
+
+// social
+.social
+	+clr
+	li
+		float: left
+		margin-left: 8px
+		&:first-child
+			margin-left: 0
+	a
+		display: block
+		&:hover
+			+opacity(0.8)
+		&.vk
+			+s(vk)
+		&.fb
+			+s(fb)
+		&.tw
+			+s(tw)
+
+// wrap
+.wrap
+	padding: 70px 0
+	background: #F2F2F2
+
+.service
+	.service-in
+		@extend %wrap
+	h1
+		margin-bottom: 45px
+		line-height: 1.2 
+		text-align: center
+	.service-items
+		margin-bottom: 60px
+		+clr
+	.service-item
+		width: 164px
+		margin-left: 40px
+		float: left
+		&:first-child
+			margin-left: 0
+	.service-media
+		margin-top: 14px
+		margin-bottom: 50px
+		position: relative
+		&:before
+			content: ""
+			+s(hexahedron)
+			position: absolute
+			top: -13px
+			left: 0px
+	.service-img
+		width: 135px
+		height: 148px
+		margin: 0 auto
+		overflow: hidden
+	.service-descr
+		font-size: 13px
+		+r-light
+
+.slider
+	position: relative
+	h1
+		margin-bottom: 20px
+		text-align: center
+	.slider-items
+		min-width: 980px
+		+clr
+	.slider-item
+		float: left
+		width: 33.333%
+		&.slick-center
+			.slider-descr
+				display: block
+			.slider-media
+				img
+					filter: grayscale(0)
+					-webkit-filter: grayscale(0)
+					-moz-filter: grayscale(0)
+					-ms-filter: grayscale(0)
+					-o-filter: grayscale(0)
+					filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale")
+					filter: gray
+					-webkit-filter: grayscale(0)
+					+opacity(1)
+	.slider-media
+		height: 215px
+		line-height: 215px
+		margin-bottom: 15px 
+		img
+			vertical-align: bottom
+			filter: grayscale(100%)
+			-webkit-filter: grayscale(100%)
+			-moz-filter: grayscale(100%)
+			-ms-filter: grayscale(100%)
+			-o-filter: grayscale(100%)
+			filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='1'/></filter></svg>#grayscale")
+			filter: gray
+			-webkit-filter: grayscale(1)
+			+opacity(0.3)
+	.slider-descr
+		display: none
+		color: #262626
+		text-align: center
+		.slider-descr-title
+			font-size: 18px
+			+r-bold
+		.slider-descr-note
+			font-size: 14px
+			+r-light
+		.slider-descr-capacity
+			font-size: 11px
+			+r-light
+	.slick-prev, .slick-next
+		&:before
+			content: none
+	.slick-prev
+		+s(prev)
+		position: absolute
+		top: 145px
+		left: 33%
+		margin-left: -50px
+		z-index: 666
+		cursor: pointer
+		&:hover
+			+opacity(0.7)
+	.slick-next
+		+s(next)
+		position: absolute
+		top: 145px
+		right: 33%
+		margin-right: -50px
+		z-index: 666
+		cursor: pointer
+		&:hover
+			+opacity(0.7)

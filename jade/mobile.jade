@@ -1,0 +1,43 @@
+﻿doctype html
+
+html
+  head
+    title Mobile
+    include includes/_head
+  body
+    .out
+      .slide
+        header
+          .header-in
+            a(href="#").logo Concrete drive
+            .nav
+              .nav-ico
+              ul
+                li
+                  a(href="#").is-active главная
+                li
+                  a(href="#") О КОМПАНИИ
+                li
+                  a(href="#") услуги
+                li
+                  a(href="#") автопарк
+                li
+                  a(href="#") стоимость
+                li
+                  a(href="#").is-special онлайн-заявка       
+            .lang
+              ul
+                li
+                  a(href="#").is-active rus
+                li
+                  a(href="#") eng
+            .tel
+              .tel-num
+                span.tel-num-pref +7 (917)
+                span.tel-num-num 557-57-55
+              .tel-descr Круглосуточно
+        .slide-in
+          h1 Аренда автомобилей в Сочи
+          h3.h3-info обслуживание корпоративных мероприятий
+          h3.h3-type mercedes «e», «S», «V»  class,  viano,  sprinter
+    script(data-headjs-load='js/init.js', src='js/lib/head.js')
