@@ -571,13 +571,39 @@ footer
 		font-size: 14px
 		text-transform: uppercase
 		color: #fff
+		&:hover
+			background: #39414b 
 	.form-list
 		ul
 			margin-top: 10px
 		li
-			padding: 2px 10px
+			padding: 3px 0 4px 10px
 			margin-top: 3px
 			background: transparent
 			border: 1px solid #fff
+			position: relative
 			&:first-child
 				margin-top: 0
+		.form-list-item
+			font-size: 12px
+			+r
+			.form-list-auto
+				width: 170px
+				display: inline-block
+				vertical-align: top
+				span
+					color: #000 
+					&.form-list-note
+						color: #a28e00 
+			.form-list-summ
+				width: 90px
+				display: inline-block
+				vertical-align: top
+			.form-list-del
+				position: absolute
+				top: 0
+				right: 0
+				+s(list-close)
+				cursor: pointer
+
+			
