@@ -197,8 +197,14 @@ footer .tel { float: right; }
 .form .form-col.m-col3 { width: 200px; }
 .form .form-col.m-col4 { width: 170px; }
 .form .form-title { min-height: 19px; margin-bottom: 8px; color: #302f2f; font-family: "Roboto", sans-serif; font-weight: 300; font-style: normal; }
-.form .form-date { padding: 14px 15px; background: white; border: 1px solid #d9ac0e; font-size: 15px; text-align: left; font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; position: relative; cursor: pointer; }
-.form .form-date .form-date-ico { position: absolute; top: 50%; margin-top: -16px; right: 11px; text-align: right; background: url('../img/icons-s4392cb8907.png') 0 -29px no-repeat; width: 31px; height: 32px; }
+.form .form-date { font-size: 15px; background: white; text-align: left; font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; position: relative; cursor: pointer; }
+.form .form-date .form-date-day { width: 168px; padding: 14px 15px; background: transparent; border: 1px solid #d9ac0e; font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; font-size: 15px; color: black; position: relative; z-index: 22; cursor: pointer; }
+.form .form-date .form-date-day:-ms-input-placeholder { font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; font-size: 15px; color: black; }
+.form .form-date .form-date-day:-moz-placeholder { font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; font-size: 15px; color: black; }
+.form .form-date .form-date-day::-moz-placeholder { font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; font-size: 15px; color: black; }
+.form .form-date .form-date-day::-webkit-input-placeholder { font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; font-size: 15px; color: black; }
+.form .form-date .form-date-day::placeholder { font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; font-size: 15px; color: black; }
+.form .form-date .form-date-ico { z-index: 11; position: absolute; top: 50%; margin-top: -16px; right: 11px; text-align: right; background: url('../img/icons-s4392cb8907.png') 0 -29px no-repeat; width: 31px; height: 32px; }
 .form .form-select { padding: 15px 15px; background: white; border: 1px solid #d9ac0e; position: relative; cursor: pointer; }
 .form .form-select .form-select-ico { background: url('../img/icons-s4392cb8907.png') 0 0 no-repeat; width: 13px; height: 19px; position: absolute; top: 50%; margin-top: -10px; right: 14px; }
 .form .input { width: 168px; padding: 16px 15px; background: white; border: 1px solid #d9ac0e; font-size: 15px; color: black; }

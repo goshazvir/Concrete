@@ -55,12 +55,15 @@ head.ready(function() {
 	}
 	slick()
 
-
-
+	$(function() {
+	  $( ".js-datepicker" ).datepicker({
+	  	dateFormat: 'd M yy',
+	    buttonImageOnly: true,
+	    buttonText: "Select date"
+	  });
+	});
 
 	$(window).resize(function(){
 		slick()
 	});
-
-
 });

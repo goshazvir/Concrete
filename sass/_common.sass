@@ -510,15 +510,29 @@ footer
 		color: #302f2f
 		+r-light
 	.form-date
-		padding: 14px 15px
-		background: #fff
-		border: 1px solid #d9ac0e 
 		font-size: 15px
+		background: #fff
 		text-align: left
 		+r
 		position: relative
 		cursor: pointer
+		.form-date-day
+			width: 168px
+			padding: 14px 15px
+			background: transparent 
+			border: 1px solid #d9ac0e 
+			+r
+			font-size: 15px
+			color: #000
+			position: relative
+			z-index: 22
+			cursor: pointer
+			+placeholder
+				+r
+				font-size: 15px
+				color: #000
 		.form-date-ico
+			z-index: 11
 			position: absolute
 			top: 50%
 			margin-top: -16px
