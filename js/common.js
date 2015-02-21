@@ -63,6 +63,19 @@ head.ready(function() {
 	  });
 	});
 
+	$('.js-select').on('click', function() {
+		$('.popup').show();
+	});
+	$('.js-popup-ok').on('click', function() {
+		$('.popup').hide();
+	});
+
+	(function($){
+    $(window).load(function(){
+        $(".js-scroll").mCustomScrollbar();
+    });
+	})(jQuery);
+
 	$(window).resize(function(){
 		slick()
 	});
