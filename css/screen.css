@@ -67,6 +67,7 @@ body ::selection { background: #fcde0f; }
 body ::-moz-selection { background: #fcde0f; }
 body.is-overlay { position: relative; }
 body.is-overlay .nav-overlay { display: block; }
+body.is-overlay .nav li.mobile { display: block; }
 
 h1 { font-family: "Roboto", sans-serif; font-weight: 300; font-style: normal; font-size: 35px; text-transform: uppercase; }
 
