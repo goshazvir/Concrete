@@ -10,6 +10,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
   </head>
   <body>
@@ -76,7 +77,26 @@
                     </div>
                     <div class="form-col m-col2">
                       <div class="form-title">Выбор автомобилей</div>
-                      <div class="form-select js-select"><span class="form-select-meta">Выбрать из списка...</span><i class="form-select-ico"></i></div>
+                      <div class="form-select">
+                        <div class="form-select-on js-select"><span class="form-select-meta">Выбрать из списка...</span><i class="form-select-ico"></i></div>
+                        <div class="popup">
+                          <div class="popup-topper">
+                            <div class="popup-topper-left">Класс авто:</div>
+                            <div class="popup-topper-right">Кол-во авто:</div>
+                          </div>
+                          <ul class="popup-list js-scroll">
+                            <li class="popup-list-item is-active"> 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, excepturi.</li>
+                            <li class="popup-list-item"> 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, necessitatibus.</li>
+                            <li class="popup-list-item"> 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, obcaecati.</li>
+                            <li class="popup-list-item"> 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quod.</li>
+                            <li class="popup-list-item"> 5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quod.</li>
+                            <li class="popup-list-item"> 6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quod.</li>
+                            <li class="popup-list-item"> 7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quod.</li>
+                            <li class="popup-list-item"> 8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quod.</li>
+                          </ul>
+                          <button class="popup-btn js-popup-ok">готово</button>
+                        </div>
+                      </div>
                       <div class="form-list">
                         <ul>
                           <li>
