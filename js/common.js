@@ -69,20 +69,13 @@ head.ready(function() {
 		return false;
 	});
 
-
 	$('.popup-list-item label').on('click', function() {
-		
-		if ($(this).parent().hasClass("is-active")){
-			$(this).parent().removeClass('is-active');
-			console.log("111");
-		}
-		else {
-			$(this).parent().addClass('is-active');
-			console.log("222");
-		}
-
+	 if($(this).find('input').is(":checked")){
+	  $(this).parent().addClass('is-active');
+	 } else {
+	  $(this).parent().removeClass('is-active');
+	 }
 	});
-
 
 	$(function() {
 	  $( ".js-datepicker" ).datepicker({
