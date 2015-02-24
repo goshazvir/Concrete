@@ -70,14 +70,14 @@ head.ready(function() {
 	});
 
 
-	$('.popup-list-item').on('click', function() {
+	$('.popup-list-item label').on('click', function() {
 		
-		if ($(this).hasClass("is-active")){
-			$(this).removeClass('is-active');
+		if ($(this).parent().hasClass("is-active")){
+			$(this).parent().removeClass('is-active');
 			console.log("111");
 		}
 		else {
-			$(this).addClass('is-active');
+			$(this).parent().addClass('is-active');
 			console.log("222");
 		}
 
