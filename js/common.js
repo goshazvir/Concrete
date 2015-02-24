@@ -55,6 +55,35 @@ head.ready(function() {
 	}
 	slick()
 
+	$('.summ .summ-minus').click(function(){
+		var count = parseInt($(this).prev('input').val());
+		if (count <= 1) {$(this).next('input').val(1);}
+		else {$(this).prev('input').val(count-1);}
+		return false;
+	});
+
+	$('.summ .summ-plus').click(function(){
+		var count = parseInt($(this).prev().prev('input').val());
+		if (count < 1) {$(this).prev().prev('input').val(1);}
+		else {$(this).prev().prev('input').val(count+1);}
+		return false;
+	});
+
+
+	$('.popup-list-item').on('click', function() {
+		
+		if ($(this).hasClass("is-active")){
+			$(this).removeClass('is-active');
+			console.log("111");
+		}
+		else {
+			$(this).addClass('is-active');
+			console.log("222");
+		}
+
+	});
+
+
 	$(function() {
 	  $( ".js-datepicker" ).datepicker({
 	  	dateFormat: 'd M yy',
